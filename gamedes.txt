@@ -1,0 +1,13 @@
+Avventura grafica
+“L’enigma nel sogno” è un'esperienza che permette ai giocatori di entrare nei quadri di Giorgio De Chirico e di interagire con gli oggetti per ottenere informazioni relative ai quadri stessi e progredire nel completamento del gioco.
+
+Storia e personaggi
+Il filo conduttore nella narrazione è la risoluzione di enigmi (e quesiti?) che permettono al giocatore di avanzare verso il completamento del gioco. (? l'abbiamo già scritto sopra)
+Il protagonista è un alter ego del giocatore che può muoversi all’interno dei quadri.
+Non ci sono altri personaggi con cui è possibile interagire, ad eccezione di un manichino, chiamato Profeta, che scrive informazioni sulla lavagnetta di fronte a sè quando gli si consegnano dei gessetti (questo è troppo preciso, io metterei "dei token" invece di gessetti).
+
+Ambientazione
+L'intero mondo è basato sui quadri di Giorgio De Chirico, uniti in modo da formare una piccola città. In particolare sono stati scelti quadri della collezione sulle piazze italiane e quelli con soggetti manichini inanimati.(superfluo, io lo toglierei)
+La mappa è delimitata da un muro circolare che impedisce al giocatore di uscire dai confini dell'area di gioco. Il palco, da cui il giocatore inizia la partita, è una zona sopraelevata dalla quale è possibile uscire solo dopo la risoluzione di una prova. La torre che padroneggia l’ambientazione è l’edificio che sancisce la fine del gioco in quanto è possibile accedervi solo quando tutte le altre prove sono completate.
+
+
