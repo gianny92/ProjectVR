@@ -1,14 +1,10 @@
 Slide 1 - Haptic retargeting (video castello?)
 
-Haptic retargeting is a way for repurposing passive haptics, where a single physical prop can provide passive haptics for multiple virtual objects, by hacking the human perception. This technique has been sperimented in a framework based on Minecraft, game in wich you can builg anything you want by simply stacking cubes.
-
---- or ----
-
-In a game like Minecraft, you can build whatever comes out from your imagination by simply stacking cubes. Let's say we want to bring this game into an immersive VR experience, and we want to feel the sensation that we are stacking those cubes with our hands. A way to to this could be by using this haptic retargeting tecnique, where a single physical prop can provide passive haptics for multiple virtual objects, by hacking the human perception.
-
---- se c'Ë il video ---
-
-As you can see, the user reach out and grabs what he thinks they are different cubes, when actually there is only one physical cube.
+Tutti conoscono minecreaft, un gioco che ha avuto successo perch√® ha fatto della creativit√† del giocatore il suo cavallo di battaglia poich√® permette di costruire qualsiasi cosa con dei cubetti come fossero mattoncini Lego.
+E se volessimo creare una realt√† virtuale IMMERSIVA del gioco cosa c'√® di meglio che offrire all'utente la possibilit√† di toccare con mano quasti cubetti attraverso interfacce tattili passive cio√® dei cubetti reali?
+Questo sarebbe impossibile perch√® servirebbero una quantit√† di cubetti reali potenzialmente illimitata.
+Perch√® invece non usare un singolo cubetto fisico per dare lo stesso feedback tattile per tutti i cubetti virtuali.
+Questo √® l'obbiettivo dell'haptic retargeting ottenuto (come vedete nel video) imbrogliando la nostra percezione. 
 
 
 Slide 2 - Project by/Work by/Research by
@@ -19,19 +15,19 @@ This work was done by these people (...) at an internship at microsoft research,
 
 Slide 3 - Related work
 
-Now, let's take a step back and talk about the work previously done with similar techniques. 
-Redirected touching warps the virtual space to map differently shaped virtual objects onto a single real object. In this example, you can see yourself interacting with this surface and you're actually convinced that the surface is curved when, in reality, it's not. That surface is flat. 
-In redirected walking, the trajectory that you have in the real world is manipulated in order to perceive that you're walking in a different path. This makes you able to explore large virtual environments when you have a small track space.
-Now, why does this tecniques actually work?
-
+Nel RT si distorce lo spazio virtuale per mappare oggetti viruali di diverse forme in un singolo reale.
+(esempio foto)
+Nel RW si cerca di risolvere il problema dei grandi spazi viruali mappati in piccoli spazi reali.
+Camminando, la traettoria nello spazio reale viene manipolata in modo da perceperire un diverso percorso nello spazio virtuale.
+Qual'√® il principio alla base di queste tecniche?
 
 Slide 4 - Dominance of visual perception
 
-The key idea is that when senses conflict, vision often dominates. Many experimentations were done and lead to this conclusion.
-Vision is also found to dominate proprioception, the sensory information that contributes to the perception of self (where I am), and vestibular cues, that provide the perception of accelleration (where I'm going).
-This findings can be exploited in order to manipulate the position of a user's virtual body and head movement without him noticing. 
-
-Dati sperimentali dicono che una traslazione del corpo virtuale puÚ essere scalata positivamente del 26% e negativamente del 14% senza che l'utente possa notarlo. Una rotazione, invece, puÚ essere scalata positivamente del 49% e negativamente del 20%.
+Il dominio della percezione visiva ovvero che quando i sensi vanno in conflitto, la vista domina. Questo √® stato dimostrato da molti esperimenti in questo campo.
+La vista domina la propriocezione, cio√® le informazioni sensoriali che contribuiscono alla percezione di se stessi all'interno (dove sono?).
+Domina anche i "vestibular cues" i responsabili della percezione del movimento (dove sto andando?).
+Tutto questo pu√≤ essere sfruttato per manipolare la posizione del corpo virtuale e dei movimenti della testa virtuale senza che l'utente se ne accorga. 
+Dati sperimentali dicono che una traslazione del corpo virtuale pu√≤ essere scalata positivamente del 26% e negativamente del 14% senza che l'utente possa notarlo. Una rotazione, invece, pu√≤ essere scalata positivamente del 49% e negativamente del 20%.
 
 
 Slide 5 - Goals
@@ -47,24 +43,24 @@ Slide 6 - Implementation
 Ecco gli strumenti che sono stati utilizzati per sperimentare questa tecnica:
 
 L'utente indossa un Oculus Rift dk2 per visualizzare la scena virtuale
-Kinect sul soffitto per osservare l'ambiente e renderizzare ciÚ che succede nella scena virtuale
+Kinect sul soffitto per osservare l'ambiente e renderizzare ci√≤ che succede nella scena virtuale
 Bottone fisico da premere ogni volta che si conclude un azione
 Marker sulla mano per permettere al kinect di tracciarla
-Cubo fisico (tracciato), che sar‡ la nostra interfaccia tattile passiva
+Cubo fisico (tracciato), che sar√† la nostra interfaccia tattile passiva
 
 
 Slide 7 - Body Warping
 
-In questo esempio, vengono mostrati 3 cubi reali all'utente. Dopo che si Ë messo l'hmd, vengono rimossi 2 di questi cubi. All'utente viene mostrata una scena guidata dove deve toccare prima il cubo blu, poi quello rosso, poi quello verde. Dopo ognuna di queste azioni deve premere il bottone per passare alla prossima fase. Come vedete, l'utente, toccando effettivamente lo stesso cubo reale, Ë convinto di toccarne 3 diversi. Questo perchË al corpo virtuale dell'utente, in questo caso specifico il braccio, viene effettuata una 'correzione' durante il movimento. La traslazione del braccio viene scalata in modo tale da raggiungere il cubo virtuale giusto, senza che lui se ne accorga. Lo scalamento, per non essere notato, viene effettuato in modo incrementale, e non immediato. Questa tecnica Ë chiamata body warping.
-(Si puÚ aggiungere: in realt‡, oltre alla traslazione del braccio, viene effettuata anche una rotazione del corpo. Se cosÏ non fosse, per grandi distanze o dopo troppe azioni il braccio potrebbe trovarsi in una posizione innaturale)
+In questo esempio, vengono mostrati 3 cubi reali all'utente. Dopo che si √® messo l'hmd, vengono rimossi 2 di questi cubi. All'utente viene mostrata una scena guidata dove deve toccare prima il cubo blu, poi quello rosso, poi quello verde. Dopo ognuna di queste azioni deve premere il bottone per passare alla prossima fase. Come vedete, l'utente, toccando effettivamente lo stesso cubo reale, √® convinto di toccarne 3 diversi. Questo perch√® al corpo virtuale dell'utente, in questo caso specifico il braccio, viene effettuata una 'correzione' durante il movimento. La traslazione del braccio viene scalata in modo tale da raggiungere il cubo virtuale giusto, senza che lui se ne accorga. Lo scalamento, per non essere notato, viene effettuato in modo incrementale, e non immediato. Questa tecnica √® chiamata body warping.
+(Si pu√≤ aggiungere: in realt√†, oltre alla traslazione del braccio, viene effettuata anche una rotazione del corpo. Se cos√¨ non fosse, per grandi distanze o dopo troppe azioni il braccio potrebbe trovarsi in una posizione innaturale)
 
 Slide 8 - World Warping
 
-In quest'altro esempio, nel mondo virtuale vengono mostrati dei cubi posizionati ad 'anello'. L'utente, come prima, deve raggiungere un cubo e poi premere il bottone. A differenza di prima, perÚ, deve anche girarsi verso uno 'schermo' posto alla sua destra. Ed Ë in questo momento che avviene la magia: mentre l'utente ruota la testa, la rotazione virtuale viene scalata, per allineare il prossimo cubo virtuale a quello reale, facendo, di fatto, ruotare l'intera scena. Anche questo viene effettuato in modo incrementale. Questa tecnica Ë chiamata world warping.
+In quest'altro esempio, nel mondo virtuale vengono mostrati dei cubi posizionati ad 'anello'. L'utente, come prima, deve raggiungere un cubo e poi premere il bottone. A differenza di prima, per√≤, deve anche girarsi verso uno 'schermo' posto alla sua destra. Ed √® in questo momento che avviene la magia: mentre l'utente ruota la testa, la rotazione virtuale viene scalata, per allineare il prossimo cubo virtuale a quello reale, facendo, di fatto, ruotare l'intera scena. Anche questo viene effettuato in modo incrementale. Questa tecnica √® chiamata world warping.
 
 Slide 9 - Hybrid Warping
 
-In quest'ultimo esempio, l'utente viene guidato nella costruzione di un castello. La tecnica Hybrid Warping, come si intuisce dal nome, Ë una combinazione delle precedenti tecniche. In sostanza, la rotazione della testa effettua il world warping 'il pi˘ possibile', mentre l'allineamento finale viene effettuato dal body warping. In questo caso, viene effettuata anche una traslazione verso l'alto, per dare l'impressione all'utente di mettere un cubo sopra un altro cubo, mentre in realt‡ sta posizionando il cubo reale sopra al tavolo.
+In quest'ultimo esempio, l'utente viene guidato nella costruzione di un castello. La tecnica Hybrid Warping, come si intuisce dal nome, √® una combinazione delle precedenti tecniche. In sostanza, la rotazione della testa effettua il world warping 'il pi√π possibile', mentre l'allineamento finale viene effettuato dal body warping. In questo caso, viene effettuata anche una traslazione verso l'alto, per dare l'impressione all'utente di mettere un cubo sopra un altro cubo, mentre in realt√† sta posizionando il cubo reale sopra al tavolo.
 
 (Accorcia il video: togli prima parte (3 cubi) e terza parte (rallenty), totale circa 30 secondi come i precedenti)
 
@@ -72,9 +68,9 @@ Slide 10 - Results
 
 (slide solo grafici, togliere wand, aggiungere grafico 'correzione/no correzione')
 
-Analizzando i movimenti della mano, si puÚ notare come con il body warp l'utente tende a 'correggere', verso la fine, il movimento del proprio braccio. Questo avviene perchË l'allineamento del cubo virtuale a quello reale viene effettuato durante il movimento, e questo porta l'utente a spostare il braccio in una direzione, che poi si rende conto essere sbagliata (quanto, in realt‡, Ë giusta), e quindi cerca di aggiustarla.
-Nel world warping, invece, l'allineamento Ë gi‡ avvenuto prima del movimento: quindi l'utente muove sempre il braccio dritto davanti a sË, senza errori. Difatti, il world warping dimostra di portare l'utente a fare il percorso pi˘ diretto, rispetto a body e hybrid warping.
-L'hybrid warping, perÚ, risulta essere il preferito dagli utenti, poichË porta un maggior senso di realismo, presenza, qualit‡ dell'interfaccia e sensazione tattile.
+Analizzando i movimenti della mano, si pu√≤ notare come con il body warp l'utente tende a 'correggere', verso la fine, il movimento del proprio braccio. Questo avviene perch√® l'allineamento del cubo virtuale a quello reale viene effettuato durante il movimento, e questo porta l'utente a spostare il braccio in una direzione, che poi si rende conto essere sbagliata (quanto, in realt√†, √® giusta), e quindi cerca di aggiustarla.
+Nel world warping, invece, l'allineamento √® gi√† avvenuto prima del movimento: quindi l'utente muove sempre il braccio dritto davanti a s√®, senza errori. Difatti, il world warping dimostra di portare l'utente a fare il percorso pi√π diretto, rispetto a body e hybrid warping.
+L'hybrid warping, per√≤, risulta essere il preferito dagli utenti, poich√® porta un maggior senso di realismo, presenza, qualit√† dell'interfaccia e sensazione tattile.
 
 Slide 11 - Discussion
 
@@ -94,12 +90,12 @@ Svantaggi:
 
 Slide 12 - Future work
 
-L'haptic retargeting risolve quest'ultimo problema, permettendo di avere un ambiente fisico diverso da quello virtuale in modo potenzialmente drammatico, permettendo di offrire spazi virtuali complessi con una migliore percezione tattile. Sono presenti perÚ delle limitazioni:
+L'haptic retargeting risolve quest'ultimo problema, permettendo di avere un ambiente fisico diverso da quello virtuale in modo potenzialmente drammatico, permettendo di offrire spazi virtuali complessi con una migliore percezione tattile. Sono presenti per√≤ delle limitazioni:
 
 - Sono preferibili movimenti lenti
-- Non sempre Ë possibile effettuare il world warping (es. movimento in avanti)
+- Non sempre √® possibile effettuare il world warping (es. movimento in avanti)
 
-Non sono ancora presenti prodotti finali che utilizzino questa tecnica, poichË Ë ancora in sviluppo. Si sta tutt'ora lavorando per ottenere:
+Non sono ancora presenti prodotti finali che utilizzino questa tecnica, poich√® √® ancora in sviluppo. Si sta tutt'ora lavorando per ottenere:
 
 - Maggior sfruttamento del dominio della vista
 - Predizione del percorso/intenzione dell'utente
