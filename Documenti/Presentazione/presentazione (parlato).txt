@@ -1,10 +1,10 @@
 Slide 1 - Haptic retargeting (video castello?)
 
-Tutti conoscono minecreaft, un gioco che ha avuto successo perchè ha fatto della creatività del giocatore il suo cavallo di battaglia poichè permette di costruire qualsiasi cosa con dei cubetti come fossero mattoncini Lego.
-E se volessimo creare una realtà virtuale IMMERSIVA del gioco cosa c'è di meglio che offrire all'utente la possibilità di toccare con mano quasti cubetti attraverso interfacce tattili passive cioè dei cubetti reali?
-Questo sarebbe impossibile perchè servirebbero una quantità di cubetti reali potenzialmente illimitata.
-Perchè invece non usare un singolo cubetto fisico per dare lo stesso feedback tattile per tutti i cubetti virtuali.
-Questo è l'obbiettivo dell'haptic retargeting ottenuto (come vedete nel video) imbrogliando la nostra percezione. 
+- Chi di voi non conosce minecraft? Minecraft è...
+- E se volessimo una vr immersiva dove è possibile toccare...
+- Potremmo usare dei cubi reali come interfaccia tattile passiva, ma ne servirebbero tanti (illimitati)
+- E se ne usassimo solo uno?
+- Questo è l'haptic retargeting
 
 
 Slide 2 - Project by/Work by/Research by
@@ -32,11 +32,11 @@ Dati sperimentali dicono che una traslazione del corpo virtuale può essere scal
 
 Slide 5 - Goals
 
-Reusing the passive haptics of the same real physical objects across multiple virtual objects, by finding a mapping between the virtual and real coordinate system.
-Requirements:
-- The mapping is dynamic: meaning that the solution should support interactive manipulations and not require careful placement of objects or pre-computed solutions
-- The mapping is minimally noticable, and therefore minimally disturbing to the user
-
+- Riutilizzare il feedback tattile di un oggetto reale per più oggetti della scena virtuale.
+- Quindi va trovato un mapping...
+- Deve essere:
+- Dinamico, non si dovrebbero usare soluzioni 'prefissate', 'precalcolate', poichè la manipolazione è interattiva
+- Il mapping deve essere trasparente
 
 Slide 6 - Implementation
 
